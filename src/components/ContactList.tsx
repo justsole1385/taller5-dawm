@@ -1,13 +1,11 @@
-import type { Contact } from '../types/contact';
-import ContactRow from './ContactRow';
+import type { Contact } from '../types/contact'
+import ContactRow from './ContactRow'
 
-export const contacts: Contact[] = [
-	{ id: 1, name: 'María López', email: 'maria@example.com' },
-	{ id: 2, name: 'Carlos Ruiz', email: 'carlos@example.com' },
-	// ... Ana Gómez, Luis Fernández
-];
+interface ContactListProps {
+	contacts: Contact[]
+}
 
-function ContactList() {
+function ContactList({ contacts }: ContactListProps) {
 	return (
 		<table className="table table-striped table-sm">
 			<thead>
@@ -27,4 +25,3 @@ function ContactList() {
 }
 
 export default ContactList;
-
